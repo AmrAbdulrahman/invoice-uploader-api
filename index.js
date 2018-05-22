@@ -47,4 +47,6 @@ app.post('/invoice', parser.json(), (req, res) => {
   }, 1500);
 });
 
-app.listen(8000, () => console.log('App is listening on port 8000'));
+app.listen(process.env.PORT || 8000, () => {
+  console.log('App is listening on port 8000');
+});
